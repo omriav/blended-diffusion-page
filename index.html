@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Blended Diffusion for Text-driven Editing of Natural Images.">
+  <meta name="keywords" content="Blended Diffusion, Text-driven image editing, Diffusion editing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blended Diffusion: Text-driven Editing of Natural Images</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Blended Diffusion: Text-driven Editing of Natural Images</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://omriavrahami.com">Omri Avrahami</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.cs.huji.ac.il/~danix/">Dani Lischinski</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.ohadf.com/">Ohad Fried</a><sup>2</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>The Hebrew University of Jerusalem,</span>
+              <span class="author-block"><sup>2</sup>Reichman University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2111.14818" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Video Link.
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/omriav/blended-diffusion"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div id="teaser" class="has-text-centered">
+          <img style="width: 90%;" src="./static/images/teaser.jpg" alt="Blended Diffusion teaser.">
+        </div>
+
+        <h2 class="subtitle has-text-centered">
+          Given an input image and a mask, <span class="method-name">Blended Diffusion</span> modifies the masked
+          area according to a guiding text prompt, without affecting the unmasked regions
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Natural language offers a highly intuitive interface for image editing. In this paper, we introduce the
+              first solution for performing local (region-based) edits in generic natural images, based on a natural
+              language description along with an ROI mask.
+            </p>
+            <p>
+              We achieve our goal by leveraging and combining a pretrained language-image model (CLIP), to steer the
+              edit towards a user-provided text prompt, with a denoising diffusion probabilistic model (DDPM) to
+              generate natural-looking results.
+            </p>
+            <p>
+              To seamlessly fuse the edited region with the unchanged parts of the image, we spatially blend noised
+              versions of the input image with the local text-guided diffusion latent at a progression of noise levels.
+              In addition, we show that adding augmentations to the diffusion process mitigates adversarial results.
+              We compare against several baselines and related methods, both qualitatively and quantitatively, and show
+              that our method outperforms these solutions in terms of overall realism, ability to preserve the
+              background and matching the text. Finally, we show several text-driven editing applications, including
+              adding a new object to an image, removing/replacing/altering existing objects, background replacement, and
+              image extrapolation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Applications</h2>
+
+          <h3 class="title is-4">Foreground removal</h3>
+          <div class="content has-text-justified">
+            <p>
+              Given an input image and a mask, we demonstrate inpainting of the masked region using different guiding
+              texts. When no prompt is given, the result is similar to traditional image inpainting.
+            </p>
+          </div>
+
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/img.jpg" width="100%" />
+                    <p class="subtitle">Input image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/mask_overlay.jpg" width="100%" />
+                    <p class="subtitle">Input mask</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/pred1.jpg" width="100%" />
+                    <p class="subtitle">No prompt</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/pred2.jpg" width="100%" />
+                    <p class="subtitle">"white ball"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/pred3.jpg" width="100%" />
+                    <p class="subtitle">"bowl of water"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/foreground_remove_dogs/pred4.jpg" width="100%" />
+                    <p class="subtitle">"stool"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{avrahami2021blended,
+  title={Blended diffusion for text-driven editing of natural images},
+  author={Avrahami, Omri and Lischinski, Dani and Fried, Ohad},
+  journal={arXiv preprint arXiv:2111.14818},
+  year={2021}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/abs/2111.14818">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/omriav/blended-diffusion" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Was adapted from <a href="https://github.com/nerfies/nerfies.github.io">this</a> source code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
