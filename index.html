@@ -150,6 +150,7 @@
     </div>
   </section>
 
+  <!-- Different text prompts -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -421,12 +422,142 @@
               </div>
             </div>
           </section>
-
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- The same text prompt -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h3 class="title is-4">Multiple synthesis result for the same text prompt</h3>
+          <div class="content has-text-justified">
+            <p>
+              Because our problem is a one-to-many by its nature, it is desireable to generate multiple plausible
+              results for the same input prompt.
+              Given an input image and a mask, and an input text prompt, <span class="method-name">Blended
+                Diffusion</span> is able to generate multiple plausible results.
+            </p>
+          </div>
+
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/img.jpg" width="100%" />
+                    <p class="subtitle">Input image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/mask_overlay.jpg" width="100%" />
+                    <p class="subtitle">Input mask</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred5.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred3.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred4.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred2.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred6.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred7.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred8.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred12.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_dogs/pred10.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                </div>
+                <div>Input prompt: "a dog"</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/img.jpg" width="100%" />
+                    <p class="subtitle">Input image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/mask_overlay.jpg" width="100%" />
+                    <p class="subtitle">Input mask</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred1.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred2.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred3.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred4.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred5.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred6.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred7.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred8.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred9.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/same_prompt_leopard/pred10.jpg" width="100%" />
+                    <p class="subtitle">Prediction</p>
+                  </div>
+                </div>
+                <div>Input prompt: "a rock"</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
