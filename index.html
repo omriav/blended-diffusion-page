@@ -680,6 +680,283 @@
     </div>
   </section>
 
+  <!-- Different text prompts -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h3 class="title is-4">Background replacement</h3>
+          <div class="content has-text-justified">
+            <p>
+              Given a source image and a mask of the background, <span class="method-name">Blended Diffusion</span> is
+              able to replace the background according
+              to the text description. Note that the famous landmarks are not meant to accurately appear in the new
+              background, but serve as an inspiration for the image completion.
+            </p>
+          </div>
+
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/img.jpg" width="100%" />
+                    <p class="subtitle">Input image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/mask_overlay.jpg" width="100%" />
+                    <p class="subtitle">Input mask</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred1.jpg" width="100%" />
+                    <p class="subtitle">"big mountain"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred2.jpg" width="100%" />
+                    <p class="subtitle">"swimming pool"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred4.jpg" width="100%" />
+                    <p class="subtitle">"big wall"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred3.jpg" width="100%" />
+                    <p class="subtitle">"New York City"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred5.jpg" width="100%" />
+                    <p class="subtitle">"green hills"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred8.jpg" width="100%" />
+                    <p class="subtitle">"red house"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred10.jpg" width="100%" />
+                    <p class="subtitle">"oasis"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred11.jpg" width="100%" />
+                    <p class="subtitle">"Acropolis"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred12.jpg" width="100%" />
+                    <p class="subtitle">"fire"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred13.jpg" width="100%" />
+                    <p class="big waterfall">"big mountain"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred14.jpg" width="100%" />
+                    <p class="subtitle">"China"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred15.jpg" width="100%" />
+                    <p class="subtitle">"Colloseum"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred16.jpg" width="100%" />
+                    <p class="subtitle">"festival"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred17.jpg" width="100%" />
+                    <p class="subtitle">"Golden Gate Bridge"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred18.jpg" width="100%" />
+                    <p class="subtitle">"Machu Picchu"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred19.jpg" width="100%" />
+                    <p class="subtitle">"Mount Fuji"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred20.jpg" width="100%" />
+                    <p class="subtitle">"Petra"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred21.jpg" width="100%" />
+                    <p class="subtitle">"The Great Pyramid of Giza"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred22.jpg" width="100%" />
+                    <p class="subtitle">"river"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred23.jpg" width="100%" />
+                    <p class="subtitle">"snowy mountain"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred24.jpg" width="100%" />
+                    <p class="subtitle">"Stanford University"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred25.jpg" width="100%" />
+                    <p class="subtitle">"Stonehenge"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred26.jpg" width="100%" />
+                    <p class="subtitle">"sunrise"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred27.jpg" width="100%" />
+                    <p class="subtitle">"rainy"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred28.jpg" width="100%" />
+                    <p class="subtitle">"volcanic eruption"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred29.jpg" width="100%" />
+                    <p class="subtitle">"The Western Wall"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred30.jpg" width="100%" />
+                    <p class="subtitle">"Arc de Triomphe"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_yossi/pred31.jpg" width="100%" />
+                    <p class="subtitle">"big sheep"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/img.jpg" width="100%" />
+                    <p class="subtitle">Input image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/mask_overlay.jpg" width="100%" />
+                    <p class="subtitle">Input mask</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_acropolis.jpg" width="100%" />
+                    <p class="subtitle">"Acropolis"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_big_fire.jpg" width="100%" />
+                    <p class="subtitle">"fire"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_china.jpg" width="100%" />
+                    <p class="subtitle">"China"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_colosseum.jpg" width="100%" />
+                    <p class="subtitle">"Colosseum"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_desert.jpg" width="100%" />
+                    <p class="subtitle">"Desert"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_festival.jpg" width="100%" />
+                    <p class="subtitle">"festival"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_grand_canyon.jpg" width="100%" />
+                    <p class="subtitle">"Grand Canyon"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_machu_pichu.jpg" width="100%" />
+                    <p class="subtitle">"Machu Picchu"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_north_pole.jpg" width="100%" />
+                    <p class="subtitle">"north pole"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_parking_lot.jpg" width="100%" />
+                    <p class="subtitle">"parking lot"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_petra.jpg" width="100%" />
+                    <p class="subtitle">"Petra"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_river.jpg" width="100%" />
+                    <p class="subtitle">"river"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_snowy_mountain.jpg" width="100%" />
+                    <p class="subtitle">"snowy mountain"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_stanford.jpg" width="100%" />
+                    <p class="subtitle">"Stanford University"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_stonehenge.jpg" width="100%" />
+                    <p class="subtitle">"Stonehenge"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_rainy.jpg" width="100%" />
+                    <p class="subtitle">"rainy"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_volcanic_eruption.jpg" width="100%" />
+                    <p class="subtitle">"volcanic eruption"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_western_wall.jpg" width="100%" />
+                    <p class="subtitle">"The Western Wall"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_woods.jpg" width="100%" />
+                    <p class="subtitle">"in the woods"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_beach.jpg" width="100%" />
+                    <p class="subtitle">"beach"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_big_waterfall.jpg" width="100%" />
+                    <p class="subtitle">"big waterfall"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_flower_field.jpg" width="100%" />
+                    <p class="subtitle">"flower field"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_green_hills.jpg" width="100%" />
+                    <p class="subtitle">"green hills"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_lake.jpg" width="100%" />
+                    <p class="subtitle">"lake"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_oasis.jpg" width="100%" />
+                    <p class="subtitle">"oasis"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_book_cover.jpg" width="100%" />
+                    <p class="subtitle">"book cover"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_fog.jpg" width="100%" />
+                    <p class="subtitle">"fog"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/images/background_replacement_leopard/pred_gravel.jpg" width="100%" />
+                    <p class="subtitle">"gravel"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
