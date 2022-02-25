@@ -1146,9 +1146,45 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              In a nutshell, <span class="method-name">Blended Diffusion</span> utilizes CLIP model to manipulate the
+              diffusion process of a pretrained ImageNet diffusion model.
+              The forward noising process implicitly defines a progression of image manifolds, where each manifold
+              consists of noisier images. Each step of the reverse, denoising diffusion process, projects a noisy image
+              onto the next, less noisy, manifold.
+            </p>
+
+            <p>
+              The key-insight is that in order to create a
+              seamless result we <strong>spatially blend</strong> each of the noisy CLIP-generated images progressively
+              with the corresponding noisy version of the input image.
+              While each of these blends is not guaranteed to be coherent, the projection to the next manifold make it
+              more coherent.
+            </p>
+
+            <div class="container">
+              <img src="./static/images/method.jpg" />
+            </div>
+
+            <p>For more details please read the paper.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
+      <p>If you find this research useful, please cite the following:</p>
+
       <pre><code>@article{avrahami2021blended,
   title={Blended diffusion for text-driven editing of natural images},
   author={Avrahami, Omri and Lischinski, Dani and Fried, Ohad},
