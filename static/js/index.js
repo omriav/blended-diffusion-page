@@ -32,11 +32,9 @@ $(document).ready(function () {
   var options = {
     slidesToScroll: 1,
     slidesToShow: 4,
-    loop: false,
     infinite: false,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    pagination: false
+    pagination: false,
+    navigationKeys: false
   }
 
   // Initialize all div with carousel class
