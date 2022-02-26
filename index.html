@@ -3,8 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Blended Diffusion for Text-driven Editing of Natural Images.">
-  <meta name="keywords" content="Blended Diffusion, Text-driven image editing, Diffusion editing">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blended Diffusion: Text-driven Editing of Natural Images</title>
   <link rel="icon" href="static/images/favicon.ico">
@@ -21,6 +19,7 @@
   </script>
 
   <!-- Meta tags -->
+  <meta name="keywords" content="Blended Diffusion, Text-driven image editing, Diffusion editing">
   <meta property="og:site_name" content="Blended Diffusion for Text-driven Editing of Natural Images">
   <meta property="og:title" content="Blended Diffusion for Text-driven Editing of Natural Images">
   <meta name="description" content="A novel method for editing natural images using a text-driven approach.">
@@ -157,6 +156,43 @@
         </div>
       </div>
       <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <!-- Method explanation -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              In a nutshell, <span class="method-name">Blended Diffusion</span> utilizes CLIP model to manipulate the
+              diffusion process of a pretrained ImageNet diffusion model.
+              The forward noising process implicitly defines a progression of image manifolds, where each manifold
+              consists of noisier images. Each step of the reverse, denoising diffusion process, projects a noisy image
+              onto the next, less noisy, manifold.
+            </p>
+
+            <p>
+              The key-insight is that in order to create a
+              seamless result we <strong>spatially blend</strong> each of the noisy CLIP-generated images progressively
+              with the corresponding noisy version of the input image.
+              While each of these blends is not guaranteed to be coherent, the projection to the next manifold make it
+              more coherent.
+            </p>
+
+            <div class="container">
+              <img src="./static/images/method.jpg" />
+              <br />
+              <br />
+            </div>
+
+            <p>For more details please read the paper.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1140,40 +1176,6 @@
 
           <div>
             <img src="./static/images/text_guided_extrapolation.jpg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-12">
-          <h2 class="title is-3">Method</h2>
-
-          <div class="content has-text-justified">
-            <p>
-              In a nutshell, <span class="method-name">Blended Diffusion</span> utilizes CLIP model to manipulate the
-              diffusion process of a pretrained ImageNet diffusion model.
-              The forward noising process implicitly defines a progression of image manifolds, where each manifold
-              consists of noisier images. Each step of the reverse, denoising diffusion process, projects a noisy image
-              onto the next, less noisy, manifold.
-            </p>
-
-            <p>
-              The key-insight is that in order to create a
-              seamless result we <strong>spatially blend</strong> each of the noisy CLIP-generated images progressively
-              with the corresponding noisy version of the input image.
-              While each of these blends is not guaranteed to be coherent, the projection to the next manifold make it
-              more coherent.
-            </p>
-
-            <div class="container">
-              <img src="./static/images/method.jpg" />
-            </div>
-
-            <p>For more details please read the paper.</p>
           </div>
         </div>
       </div>
