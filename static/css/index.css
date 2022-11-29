@@ -99,6 +99,15 @@ body {
 .slick-prev:before,
 .slick-next:before {
   color: black;
+  font-size: 45px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev {
+  left: -50px;
 }
 
 .publication-video {
